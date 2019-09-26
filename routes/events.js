@@ -21,7 +21,7 @@ router.get('/category/:category', (req, res, next) => {
 
   Events.findOne(params)
     .then((event) => {
-      return res.json(event);
+      return res.status(200).json(event);
     })
     .catch((err) => {
       return res.status(500).json({error: "Error reading category: " + category + ":" + err});
