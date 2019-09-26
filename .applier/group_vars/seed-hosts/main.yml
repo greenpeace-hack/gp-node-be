@@ -1,0 +1,9 @@
+---
+deploy_namespace: p4-demo
+
+openshift_cluster_content:
+- object: Deploy Backend Component
+  content:
+  - name: Deploy All Manifests
+    file: "{{ inventory_dir }}/../.openshift/manifests/"
+    namespace: "{{ deploy_namespace }}"
