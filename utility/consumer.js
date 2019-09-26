@@ -3,7 +3,7 @@ const config = require('../config/config');
 const Event = require('../models/Event');
 
 let saveEventToDb = (kafkaMessage) => {
-
+    console.log(kafkaMessage);
     let tempEvent = {};
     tempEvent.description = kafkaMessage.description;
     tempEvent.location = kafkaMessage.location.latitude + "," + kafkaMessage.location.longitude;
