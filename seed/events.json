@@ -1,0 +1,25 @@
+[
+    {
+        "model": "Event",
+        "documents": [
+            {
+                "id": "001",
+                "title": "Test 01",
+                "categories": [
+                    "Cat_01",
+                    "Cat_02"
+                ],
+                "location": "53.511449, -7.714844"
+            },
+            {
+                "id": "002",
+                "title": "Test 02",
+                "categories": [
+                    "Cat_03",
+                    "Cat_04"
+                ],
+                "location": "-7.714844, 53.511449"
+            }
+        ]
+    }
+]

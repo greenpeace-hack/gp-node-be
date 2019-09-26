@@ -1,0 +1,19 @@
+[
+    {
+        "model": "Supporter",
+        "documents": [
+            {
+                "id": "003",
+                "firstName": "John",
+                "lastName": "Doe",
+                "email": "johndoe@testmail.com"
+            },
+            {
+                "id": "004",
+                "firstName": "Jane",
+                "lastName": "Doe",
+                "email": "janedoe@testmail.com"
+            }
+        ]
+    }
+]

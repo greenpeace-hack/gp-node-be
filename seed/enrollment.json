@@ -1,0 +1,17 @@
+[
+    {
+        "model": "Enrollment",
+        "documents": [
+            {
+                "endDate": "2019-12-12",
+                "supporterId": "003",
+                "eventId": "001"
+            },
+            {
+                "endDate": "2019-12-12",
+                "supporterId": "004",
+                "eventId": "002"
+            }
+        ]
+    }
+]
