@@ -29,7 +29,7 @@ exports.consume = function() {
     console.log('Started consuming topic:', config.kafka_topic);
     try {
         const Consumer = kafka.Consumer;
-        const client = new kafka.KafkaClient("p4-demo-cluster-kafka-brokers:9092");
+        const client = new kafka.KafkaClient({kafkaHost:'p4-demo-cluster-kafka-brokers:9092'});
         let consumer = new Consumer(
         client,
         [{ topic: config.kafka_topic, partition: 0 }],
