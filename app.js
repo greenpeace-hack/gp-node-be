@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+const config = require('./config/config');
 
 var indexRouter = require('./routes/index');
 var eventsRouter = require('./routes/events');
@@ -14,7 +15,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/events', eventsRouter);
@@ -35,7 +35,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-mongoose.connect('mongodb://localhost/planet4', {useNewUrlParser: true})
+mongoose.connect(config.mongo_conn, {useNewUrlParser: true})
   .then(() => console.log('Mongo Connection Success!'))
   .catch(() => console.log('Mongo Connection Failed!'));
 

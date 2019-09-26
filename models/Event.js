@@ -5,7 +5,7 @@ let Event = mongoose.model('Event', {
   description: String,
   id: String,
   title: String,
-  categories: Schema.Types.Mixed,
+  categories: [Schema.Types.Mixed],
   location: String
 });
 
